@@ -1,3 +1,11 @@
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+}
+
 class ReverseLinkedList {
 
     public ListNode reverseList(ListNode head) {
@@ -5,10 +13,10 @@ class ReverseLinkedList {
         ListNode current = head;
 
         while (current != null) {
-            ListNode nextNode = current.next; // Store the next node
-            current.next = prev; // Reverse the link
-            prev = current; // Move prev to current
-            current = nextNode; // Move to the next node
+            ListNode nextNode = current.next;
+            current.next = prev;
+            prev = current;
+            current = nextNode;
         }
 
         return prev; 
